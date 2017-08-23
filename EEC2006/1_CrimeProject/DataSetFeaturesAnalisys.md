@@ -10,27 +10,29 @@
 			<li><strong>Class description</strong>:Description of the class</li>
 		</ul>
 	<li><strong>Complaint</strong></li>
-		<li><strong>Public place</strong></li>
-			<ul>
-				<li><strong>Police District Name</strong>: Auto describes it</li>
-				<li><strong>Police District Number</strong>: Auto describes it</li>
-				<li><strong>Block address</strong>: Auto describes it</li>
-				<li><strong>City</strong>: Auto describes it</li>
-				<li><strong>State</strong>: Auto describes it</li>
-				<li><strong>Zip Code</strong>: Auto descrives it</li>
-				<li><strong>Agency</strong>: Agency responsable for this address</li>
-				<li><strong>Place</strong>: Kind of place where the crime occured</li>
-				<li><strong>Sector</strong>:</li>
-				<li><strong>Address Number</strong>: Auto describes it</li>
-				<li><strong>Beat</strong>:</li>
-				<li><strong>PRA</strong>:</li>
-				<li><strong>Latitude</strong>: Auto describes it</li>
-				<li><strong>Longitude</strong>: Auto describes it</li>
-				<li><strong>Location</strong>: Tuple of Latitude and Longitude</li>
-			</ul>
-		<li>Complaint estimative</li>
-			<ul>
-				<li><strong>Start Data/Time</strong>: Start of the complaint</li>
-				<li><strong>End Date/Time</strong>: End of the complaint</li>
-			</ul>
+		<ul>
+			<li><strong>Public place</strong></li>
+				<ul>
+					<li><strong>Police District Name</strong>: Auto describes it</li>
+					<li><strong>Police District Number</strong>: Auto describes it</li>
+					<li><strong>Block address</strong>: Auto describes it</li>
+					<li><strong>City</strong>: Auto describes it</li>
+					<li><strong>State</strong>: Auto describes it</li>
+					<li><strong>Zip Code</strong>: Auto descrives it</li>
+					<li><strong>Agency</strong>: Agency responsable for this address</li>
+					<li><strong>Place</strong>: Kind of place where the crime occured</li>
+					<li><strong>Sector</strong>:</li>
+					<li><strong>Address Number</strong>: Auto describes it</li>
+					<li><strong>Beat</strong>:</li>
+					<li><strong>PRA</strong>:</li>
+					<li><strong>Latitude</strong>: Auto describes it</li>
+					<li><strong>Longitude</strong>: Auto describes it</li>
+					<li><strong>Location</strong>: Tuple of Latitude and Longitude</li>
+				</ul>
+			<li>Complaint estimative</li>
+				<ul>
+					<li><strong>Start Data/Time</strong>: Start of the complaint</li>
+					<li><strong>End Date/Time</strong>: End of the complaint</li>
+				</ul>
+		</ul>
 </ul>
