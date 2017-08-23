@@ -1,2 +1,2 @@
-# ufrn
-UFRN Repo
+# UFRN
+UFRN Repository with classes code and other stuff
