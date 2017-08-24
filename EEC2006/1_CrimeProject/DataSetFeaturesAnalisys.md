@@ -1,9 +1,15 @@
 <h1>About the dataset</h1>
-	The data presented is derived from reported crimes classified according to Maryland criminal code and documented by approved police incident reports. The data about crimes do not put info about the victins and its masks the actual address not putting the exact place where the complaint occured.
-	Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="blank"> https://data.world/jboutros/montgomery-county-crime </a>
-<p>Maryland County Area</p>
+<p>The data presented is derived from reported crimes classified according to Maryland criminal code and documented by approved police incident reports. The data about crimes do not put info about the victins and its masks the actual address not putting the exact place where the complaint occured.</p>
+
 <br/>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396077.35019288753!2d-77.20809505000001!3d39.14392254999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b6323583b8a387%3A0x780b190677a96873!2sMontgomery+County%2C+MD%2C+USA!5e0!3m2!1sen!2sbr!4v1503541193151" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="blank"> https://data.world/jboutros/montgomery-county-crime </a>
+<p>
+	<strong>Maryland County Area</strong>
+	</p>
+<br/>
+
+{google_map}https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396077.35019288753!2d-77.20809505000001!3d39.14392254999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b6323583b8a387%3A0x780b190677a96873!2sMontgomery+County%2C+MD%2C+USA!5e0!3m2!1sen!2sbr!4v1503541193151{/google_map}
 
 <h2><strong>Checking about data available</strong></h2>
 
