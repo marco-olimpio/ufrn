@@ -9,7 +9,7 @@ Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="bl
 	</p>
 <br/>
 
-{google_map}https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396077.35019288753!2d-77.20809505000001!3d39.14392254999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b6323583b8a387%3A0x780b190677a96873!2sMontgomery+County%2C+MD%2C+USA!5e0!3m2!1sen!2sbr!4v1503541193151{/google_map}
+<img src="https://www.montgomerycountymd.gov/POL/Resources/Images/districts/Countywidemap.jpg">
 
 <h2><strong>Checking about data available</strong></h2>
 
@@ -35,10 +35,10 @@ Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="bl
 					<li><strong>Zip Code</strong>: Auto descrives it</li>
 					<li><strong>Agency</strong>: Agency responsable for this address</li>
 					<li><strong>Place</strong>: Kind of place where the crime occured</li>
-					<li><strong>Sector</strong>:</li>
+					<li><strong>Sector</strong>: </li>
 					<li><strong>Address Number</strong>: Auto describes it</li>
-					<li><strong>Beat</strong>:</li>
-					<li><strong>PRA</strong>:</li>
+					<li><strong>Beat</strong>: Beat is the territory and time that a police officer patrols</li>
+					<li><strong>PRA</strong>: Police Reporting Area</li>
 					<li><strong>Latitude</strong>: Auto describes it</li>
 					<li><strong>Longitude</strong>: Auto describes it</li>
 					<li><strong>Location</strong>: Tuple of Latitude and Longitude</li>
