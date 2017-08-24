@@ -35,7 +35,14 @@ Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="bl
 					<li><strong>Zip Code</strong>: Auto descrives it</li>
 					<li><strong>Agency</strong>: Agency responsable for this address</li>
 					<li><strong>Place</strong>: Kind of place where the crime occured</li>
-					<li><strong>Sector</strong>: </li>
+					<li><strong>Sector</strong></li>
+					<ul>
+						<li>Rockville District: Sectors A, B, C</li>
+						<li>Bethesda District: Sectors D, E</li>
+						<li>Silver Spring District: Sector G</li>
+						<li>Wheaton-Glenmont District: Sector J, K</li>
+						<li>Germantown District: Sectors M, N, P</li>
+					</ul>
 					<li><strong>Address Number</strong>: Auto describes it</li>
 					<li><strong>Beat</strong>: Beat is the territory and time that a police officer patrols</li>
 					<li><strong>PRA</strong>: Police Reporting Area</li>
@@ -59,4 +66,11 @@ Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="bl
 	<li>Could we categorize the types of crimes in violent or not?</li>
 	<li>Is there any correlation between the number of complaints and the district's HDI?</li>
 	<li></li>
+</ul>
+
+<h4>References</h4>
+<ul>
+	<li>https://www.montgomerycountymd.gov/pol/districts/whatsmydistrict.html</li>
+	<li>http://www.ericcarlson.net/scanner/police.html</li>
+
 </ul>
