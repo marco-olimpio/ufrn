@@ -61,15 +61,12 @@ Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="bl
 <h2>Dataset questions</h2>
 <ul>
 	<li><strong>About Type of complaint</strong></li>
-	<li>
 		<ul>
 			<li>Which complaint is most common?</li>
 			<li>What are the categories of complaints?</li>
 			<li>Could we categorize the types of crimes in violent or not?</li>
 		</ul>
-	</li>
 	<li><strong>About Period of time/day of the week</strong></li>
-	<li>
 		<ul>
 			<li>Wich period of the day that most complaints occur</li>
 			<li>Wich day of the week that most complaints occur</li>
@@ -77,7 +74,6 @@ Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="bl
 			<li>These complainsts are realted with holidays?</li>
 			<li>What period of time (time of day/day of the week/month of the year) has correlation with the type of complaint</li>
 		</ul>
-	</li>
 	<li><strong>About Location</strong></li>
 		<ul>
 			<li>Where is most of the complaints?</li>
@@ -85,11 +81,9 @@ Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="bl
 			<li>What sort of place has correlation with the type of complaint</li>
 		</ul>
 	<li><strong>Correlation between locale and type of complaint</strong></li>
-	<li>
 		<ul>
 			<li>Is there a correlations between the day of the week and kind of complaint?</li>
 		</ul>
-	</li>
 </ul>
 
 <h4>References</h4>
