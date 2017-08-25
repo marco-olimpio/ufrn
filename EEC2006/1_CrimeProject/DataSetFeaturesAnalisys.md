@@ -60,12 +60,31 @@ Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="bl
 
 <h2>Dataset questions</h2>
 <ul>
-	<li>Which complaint is most common?</li>
-	<li>Where is most of the complaints?</li>
-	<li>Is there a correlations between the day of the week and kind of complaint?</li>
-	<li>Could we categorize the types of crimes in violent or not?</li>
-	<li>Is there any correlation between the number of complaints and the district's HDI?</li>
-	<li></li>
+	<li><strong>About Type of complaint</strong></li>
+		<ul>
+			<li>Which complaint is most common?</li>
+			<li>What are the categories of complaints?</li>
+			<li>Could we categorize the types of crimes in violent or not?</li>
+
+		</ul>
+	<li><strong>About Period of time/day of the week</strong></li>
+		<ul>
+			<li>Wich period of the day that most complaints occur</li>
+			<li>Wich day of the week that most complaints occur</li>
+			<li>Wich month of the years that most complaints occur </li>
+			<li>These complainsts are realted with holidays?</li>
+			<li>What period of time (time of day/day of the week/month of the year) has correlation with the type of complaint</li>
+		</ul>
+	<li><strong>About Location</strong></li>
+		<ul>
+			<li>Where is most of the complaints?</li>
+			<li>What sort of places have most complaints</li>
+			<li>What sort of place has correlation with the type of complaint</li>
+		</ul>
+	<li><strong>Correlation between locale and type of complaint</strong></li>
+		<ul>
+			<li>Is there a correlations between the day of the week and kind of complaint?</li>
+		</ul>
 </ul>
 
 <h4>References</h4>
