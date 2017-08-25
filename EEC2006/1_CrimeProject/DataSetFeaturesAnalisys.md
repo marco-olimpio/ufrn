@@ -79,13 +79,11 @@ Source: <a href="https://data.world/jboutros/montgomery-county-crime" target="bl
 		</ul>
 	</li>
 	<li><strong>About Location</strong></li>
-	<li>
 		<ul>
 			<li>Where is most of the complaints?</li>
 			<li>What sort of places have most complaints</li>
 			<li>What sort of place has correlation with the type of complaint</li>
 		</ul>
-	</li>
 	<li><strong>Correlation between locale and type of complaint</strong></li>
 	<li>
 		<ul>
