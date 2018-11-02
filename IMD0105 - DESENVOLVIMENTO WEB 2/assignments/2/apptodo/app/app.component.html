@@ -1,0 +1,248 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Simple TODO App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search task</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="container">
+  <!--  <div class="jumbotron">
+    <h3>TO DO App</h3>
+  </div>
+-->
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3>Actions</h3>
+    </div>
+    <div class="row">
+      <!--<div class="col-lg-4">-->
+      <div class="mx-auto" style="width: 200px;">
+        <!--<button type="button" class="btn btn-primary">New task</button>-->
+        <button type="button" class="btn btn-primary btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">
+          New task
+        </button>
+
+        <div class="modal" id="exampleModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">New task</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <fieldset class="form-group">
+                    <legend>Kind of task</legend>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="true">                        Task
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">                        Meeting
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <div class="form-group has-success">
+                      <label class="form-control-label" for="inputSuccess1">Title</label>
+                      <input type="text" value="" class="form-control is-valid" id="inputValid">
+                      <!--<div class="valid-feedback">Success! You've done it.</div>-->
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleTextarea">Task description</label>
+                      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>Task deadline</label>
+                      <input type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control">
+                    </div>
+                    <fieldset class="form-group">
+                      <!--<legend>Checkboxes</legend>-->
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="" checked=""> Send alert?
+                        </label>
+                      </div>
+                      <!--<div class="form-check disabled">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="" disabled=""> Option two is disabled
+                        </label>
+                      </div>-->
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">Create task</button>
+                  </fieldset>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<button type="button" class="btn btn-link">?</button>-->
+        <!--
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Esse é um teste para exibição
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          -->
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Cards</h3>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="bs-component">
+            <div class="card border-dark mb-3" style="max-width: 20rem;">
+              <div class="card-header">Task - 01/10/2019</div>
+              <div class="card-body">
+                <h4 class="card-title">Ajustar documentação</h4>
+                <p class="card-text">Realizar ajuste na documentação do projeto. O ajuste deve ser feitos nos diagramas arquiteturais.
+                </p>
+              </div>
+            </div>
+            <div class="card border-dark mb-3" style="max-width: 20rem;">
+              <div class="card-header">Task - 02/10/2019</div>
+              <div class="card-body">
+                <h4 class="card-title">Ajuste no documento de GC</h4>
+                <p class="card-text">Realizar ajuste no documento de gerência de configuração com relação aos pontos levantados
+                  em reunião.</p>
+              </div>
+            </div>
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+              <div class="card-header">Meeting - 10/09/2018</div>
+              <div class="card-body">
+                <h4 class="card-title">Reunião com equipe DEV</h4>
+                <p class="card-text">Reunião para apresentação de pontos da Gerência de Configuração.</p>
+              </div>
+            </div>
+            <div class="card border-dark mb-3" style="max-width: 20rem;">
+              <div class="card-header">Task - 11/09/2018</div>
+              <div class="card-body">
+                <h4 class="card-title">Criar Diagrama de Deployment</h4>
+                <p class="card-text">Realizar a criação do Diagrama de Deployment levantando tanto os servidores de aplicação
+                  e seus diversos serviços assim como bases de dados.</p>
+              </div>
+            </div>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+          </div>
+        </div>
+
+        <!-- DOING -->
+        <div class="col-lg-4">
+          <div class="bs-component">
+            <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+              <div class="card-header">Task - 01/09/2018</div>
+              <div class="card-body">
+                <h4 class="card-title">Documentação Runner .net Core</h4>
+                <p class="card-text">Criar documentação sobre a configuração do runner.
+                </p>
+              </div>
+            </div>
+            <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+              <div class="card-header">Task - 02/09/2018</div>
+              <div class="card-body">
+                <h4 class="card-title">Preparar máquina de build</h4>
+                <p class="card-text">Realizar a instalação e preparação de uma máquina de build</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- DONE -->
+        <div class="col-lg-4">
+          <div class="bs-component">
+            <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+              <div class="card-header">Task - 02/08/2018</div>
+              <div class="card-body">
+                <h4 class="card-title">Configuração de Runner</h4>
+                <p class="card-text">Configuração de runner do pipeline do CI.</p>
+              </div>
+            </div>
+            <div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+              <div class="card-header">Task - 15/08/2018</div>
+              <div class="card-body">
+                <h4 class="card-title">Configuração de SSL</h4>
+                <p class="card-text">Configuração de SSL no serviço do Gitlab.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
