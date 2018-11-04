@@ -5,7 +5,8 @@
   "main": "imd105server.js",
   "dependencies": {
     "express": "^4.16.4",
-    "fast-csv": "^2.4.1"
+    "fast-csv": "^2.4.1",
+    "moment": "^2.22.2"
   },
   "devDependencies": {},
   "scripts": {
