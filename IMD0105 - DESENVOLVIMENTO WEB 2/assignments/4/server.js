@@ -7,6 +7,7 @@
 //app modules
 var log = require('./modules/log/logger');
 var sec = require('./modules/security/login');
+var tsk = require('./modules/task/tasks');
 
 //node modules
 var http = require('http');
@@ -27,11 +28,11 @@ app.get('/', function(request, response){
 	response.sendFile(path.resolve(__dirname,'./assets/doc.html'));
 });
 
-app.param(['id', 'page'], function (req, res, next, value) {
-	console.log('CALLED ONLY ONCE with', value);
- 	next();
-});
-
+//app.param(['id', 'page'], function (req, res, next, value) {
+//	console.log('CALLED ONLY ONCE with', value);
+// 	next();
+//});
+///====================================================================
 app.get('/login', function(request, response){
 	if(sec.login(request.query.user, request.query.pass)){
 			response.status(200);
@@ -56,43 +57,58 @@ app.get('/logout', function(request, response){
 	}
 }
 
+///====================================================================
 
-app.get('/task/delete/:id', function(request, response){
-	console.log("delete: ID: ");//TODO	
+app.get('/task/delete/', function(request, response){
+	if(tsk.delete(request.query.id))
+		response.status(200);
+	else		
+		response.status(
+
 });
 
-app.get('/task/get', function(request, response){
-	try{
-		console.log("processando...   1");
-		if(response.query.id == null){	
-			console.log("processando...  4");
-			response.sendFile(path.resolve(__dirname, 'tasks.json'));	
-		}
-		else{
-			console.log("processando...  2");
-			var contents = fs.readFileSync("tasks.json");
-			var jsonContent = JSON.parse(contents);
-			var i;   
-			console.log("processando...  3");
-			console.log(jsonContent);
-			for(i in jsonContent.task){
-					console.log(jsonContent.task[i].id);
-					console.log(jsonContent.task[i].descricao);
-					console.log(jsonContent.task[i].detalhe);
-					console.log(jsonContent.task[i].data);
-					console.log(jsonContent.task[i].status);
-			}
-		}
-		console.log("task/get - success");
-	}catch(err){
-		console.log("task/get - problem to process the request");
-		console.log(err);	
+app.get('/task/read/', function(request, response){
+	if(response.query.id == null)	
+		return tsk.readalltsk();
+	else
+		return tsk.readtsk(request.query.id);	
+});
+
+app.get('/task/update/', function(request, response){
+	if(response.query.id != null){
+		var id = request.query.id;
+		var descricao = request.query.subject;
+		var detalhe = request.query.description;
+		var data = request.query.date;
+		var tskstatus = request.query.status;	
+		tsk.updatetsk(id, descricao, detalhe, data, tskstatus);	
+		response.status(200);
+		response.send("true");
+		return true;
 	}
-		
+	else
+		response.status(304);
+		response.send("true");
+		return false;	
 });
 
-app.get('/task/rttttiiiIrde    /:id', function(request, response){
-	
+
+app.get('/task/create/', function(request, response){
+	if(response.query.id != null){
+		var id = request.query.id;
+		var descricao = request.query.subject;
+		var detalhe = request.query.description;
+		var data = request.query.date;
+		var tskstatus = request.query.status;	
+		tsk.createtsk(id, descricao, detalhe, data, tskstatus);	
+		response.status(200);
+		response.send("true");
+		return true;
+	}
+	else
+		response.status(304);
+		response.send("true");
+		return false;	
 });
 
 app.listen(3000);

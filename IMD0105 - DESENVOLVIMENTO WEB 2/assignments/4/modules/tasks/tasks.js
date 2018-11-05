@@ -19,8 +19,12 @@ var taskdb = "./db/tasks.json";
 function addtsk(id, descricao, detalhe, data, taskStatus){
 	var db = loadDb();
 	try{
-		db.task.push({"id":id, "descricao": descricao, "detalhe": detalhe,"data": data,"status": taskStatus});	
-		return true;
+		if(findTaskById(id) == ""){	
+			db.task.push({"id":id, "descricao": descricao, "detalhe": detalhe,"data": data,"status": taskStatus});	
+			persistDb(db);	
+			return true;
+		}else
+			return false;
 	}catch(err)
 		console.log(err);
 	return false;	
@@ -29,29 +33,31 @@ function addtsk(id, descricao, detalhe, data, taskStatus){
 /**
  * */
 function updatetsk(id, descricao, detalhe, data, taskStatus){
-		try{
-			var task = findTaskById(id);
-			task.['descricao'] = descricao;
-			task.['detalhe'] = detalhe;
-			task.['data'] = data;
-			task.['status'] = taskStatus;
+	try{
+		var task = findTaskById(id);
+		task['descricao'] = descricao;
+		task['detalhe'] = detalhe;
+		task['data'] = data;
+		task['status'] = taskStatus;
 
-			return true;	
-		}catch(err)
-			console.log(err);
-		return false;
+		persistDb(db);	
+		return true;	
+	}catch(err)
+		console.log(err);
+	return false;
 }
 
 /**
  * */
 function deletetsk(id){
-		var db = loadDb();
-		try{
-			delete db.task.id;
-			return true;
-		}catch(err)
-				console.log(err);
-		return false;
+	var db = loadDb();
+	try{
+		delete db.task.id;
+		persistDb(db);	
+		return true;
+	}catch(err)
+			console.log(err);
+	return false;
 }
 
 function readtsk(id){
@@ -60,13 +66,17 @@ function readtsk(id){
 
 function readalltsk(){
 	var db = loadDb();
-		
 	return db;	
 }
 
 function loadDb(){
-		var content = fs.readFileSync(taskdb);
-		return dbContent = JSON.parse(content);
+	var content = fs.readFileSync(taskdb);
+	return dbContent = JSON.parse(content);
+}
+
+function persistDb(modifiedJson){
+	var originalJson = loadDb();
+	originalJson = JSON.stringify(modifiedJson);	
 }
 
 function findTaskById(id){
@@ -76,6 +86,8 @@ function findTaskById(id){
 		if(id == db.task[i].id)
 			return db.task[i];
 	}
+	return "";	
+}
 
 module.exports.addtsk = addtsk;
 module.exports.updatetsk = updatetsk;

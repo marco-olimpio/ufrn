@@ -22,6 +22,11 @@
 <li>Open a terminal</li>
 <li>Deflate the zipped file</li>
 <li>Enter where the code was deflated</li>
+<li>Make sure to have all installed dependencies</li>
+</ul>
+<pre><code class="language-sh">npm install
+</code></pre>
+<ul>
 <li>Start the server with</li>
 </ul>
 <pre><code class="language-sh">node server.js
@@ -29,25 +34,25 @@
 <ul>
 <li>Open your prefered browser</li>
 <li>Open <a href="http://localhost:3000">http://localhost:3000</a></li>
-<li>This document should appear</li>
+<li>This document/help_page should appear</li>
 </ul>
 <hr>
-<h4><a id="For_authentication_purposes_31"></a>For authentication purposes</h4>
+<h4><a id="For_authentication_purposes_35"></a>For authentication purposes</h4>
 <ul>
 <li><strong>How to conect?</strong> - <a href="http://localhost:3000/login/?user=">http://localhost:3000/login/?user=</a>&lt;user_name&gt;&amp;pass=&lt;user_pass&gt;</li>
 <li><strong>How to disconnect?</strong> - <a href="http://localhost:3000/logout/?user=">http://localhost:3000/logout/?user=</a>&lt;user_name&gt;</li>
 </ul>
 <hr>
-<h4><a id="Tasks_interface_35"></a>Tasks interface</h4>
+<h4><a id="Tasks_interface_39"></a>Tasks interface</h4>
 <ul>
-<li><strong>Create:</strong> - <a href="http://localhost:3000/task/create/?subject=">http://localhost:3000/task/create/?subject=</a>&lt;subject&gt;&amp;description=&lt;description&gt;</li>
+<li><strong>Create:</strong> - <a href="http://localhost:3000/task/create/?id=">http://localhost:3000/task/create/?id=</a>&lt;task_id&gt;&amp;subject=&lt;subject&gt;&amp;description=&lt;description&gt;&amp;date=&lt;date&gt;&amp;status=&lt;status=[‘todo’,‘doing’,‘done’]&gt;</li>
 <li><strong>Read:</strong>
 <ul>
 <li><strong><em>List all</em></strong> - <a href="http://localhost:3000/task/read/">http://localhost:3000/task/read/</a></li>
 <li><strong><em>List one</em></strong> - <a href="http://localhost:3000/task/read/?id=">http://localhost:3000/task/read/?id=</a>&lt;task_id&gt;</li>
 </ul>
 </li>
-<li><strong>Update:</strong> - <a href="http://localhost:3000/task/update/?id=">http://localhost:3000/task/update/?id=</a>&lt;task_id&gt;&amp;subject=&lt;subject&gt;&amp;description=&lt;description&gt;</li>
+<li><strong>Update:</strong> - <a href="http://localhost:3000/task/update/?id=">http://localhost:3000/task/update/?id=</a>&lt;task_id&gt;&amp;subject=&lt;subject&gt;&amp;description=&lt;description&gt;&amp;date=&lt;date&gt;&amp;status=&lt;status=[‘todo’,‘doing’,‘done’]&gt;</li>
 <li><strong>Delete:</strong> - <a href="http://localhost:3000/task/delete/?id=">http://localhost:3000/task/delete/?id=</a>&lt;task_id&gt;</li>
 </ul>
 <hr>
