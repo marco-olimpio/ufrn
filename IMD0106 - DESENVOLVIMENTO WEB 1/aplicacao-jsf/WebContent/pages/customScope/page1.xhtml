@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<h:head>
+   <title>Custom Scope</title>
+</h:head>
+
+<h:body>
+
+	<h:form id="form">
+	    
+	    Page1
+	
+	    <br/><br/>
+	
+		<h:outputText id="label" value="Say Something:" />
+	
+		<h:inputText id="intput" value="#{personRegistrationMBean.text}" />
+	    
+	    <br/>
+    	
+    	<h:commandButton id="button" action="#{personRegistrationMBean.moveToPage2}" value="Move to page2.xhtml >> " />
+    	
+	</h:form>
+
+</h:body>
+
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+<head>
+
+<head>
+<title>Celsius to Fahrenheit Converter</title>
+</head>
+
+<body>
+	<c:view>
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Celsius"></h:outputLabel>
+				<h:inputText value="#{temperatureConverter.celsius}"></h:inputText>
+			</h:panelGrid>
+			<h:commandButton action="#{temperatureConverter.celsiusToFahrenheit}"
+				value="Calculate"></h:commandButton>
+			<h:commandButton action="#{temperatureConverter.reset}" value="Reset"></h:commandButton>
+			<h:messages layout="table"></h:messages>
+		</h:form>
+
+		<h:panelGroup rendered="#{temperatureConverter.initial!=true}">
+			<h3>Result</h3>
+			<h:outputLabel value="Fahrenheit "></h:outputLabel>
+			<h:outputLabel value="#{temperatureConverter.fahrenheit}"></h:outputLabel>
+		</h:panelGroup>
+	</c:view>
+
+</body>
+</html>

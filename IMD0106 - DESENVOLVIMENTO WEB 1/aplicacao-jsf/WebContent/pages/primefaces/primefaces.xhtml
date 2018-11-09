@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+   <title>PrimeFaces Example</title>
+</h:head>
+
+<h:body>
+
+	<h:form id="form">
+	
+		<br/><br/><br/>
+	
+	    <h1>Primefaces Examples</h1>
+	   
+	
+		<!-- Notification Bar -->
+	
+		<p:notificationBar position="top" effect="slide" styleClass="top" widgetVar="bar">
+	    	<h:outputText value="PrimeFaces Rocks!" style="font-size:36px;" />
+		</p:notificationBar>
+		
+		<br/><br/><br/><br/><br/><br/>
+	 
+		<p:commandButton value="Show" onclick="PF('bar').show()" type="button" icon="ui-icon-arrow-1-s"/>
+		<p:commandButton value="Hide" onclick="PF('bar').hide()" type="button" icon="ui-icon-arrow-1-n"/>
+
+		<br/><br/><br/>
+		
+		<!-- Auto Complete -->
+		
+		<p:growl id="msgs" showDetail="true" />
+		
+		<p:outputLabel value="Simple:" for="acSimple" />
+        <p:autoComplete id="acSimple" value="#{primeFacesMBean.txt1}" completeMethod="#{primeFacesMBean.completeText}" />
+
+
+		<br/><br/><br/>
+
+
+		<!-- Dialog -->
+		
+		<h:panelGrid columns="1" cellpadding="5">
+		    <p:commandButton value="Effects" type="button" onclick="PF('dlg3').show();" /> 
+		</h:panelGrid>
+		
+		<p:dialog header="Effects" widgetVar="dlg3" showEffect="explode" hideEffect="bounce" height="100">
+   			 <h:outputText value="This dialog has nice effects." />
+		</p:dialog>
+		
+        
+        <br/><br/><br/>
+
+		<!-- Carousel -->
+
+    
+	    <p:carousel value="#{primeFacesMBean.people}" headerText="Responsive" var="person" itemStyle="text-align:center" responsive="true">
+	        <p:panelGrid columns="2" style="width:100%;margin:10px 0px" columnClasses="label,value" layout="grid" styleClass="ui-panelgrid-blank">
+	            <h:outputText value="Name" />
+	            <h:outputText value="#{person.name}" />
+	        </p:panelGrid>
+	 
+	        <f:facet name="footer">
+	                In total there are #{fn:length(primeFacesMBean.people)} people.
+	        </f:facet>
+	    </p:carousel>
+	    
+	    <br/><br/><br/>
+	 
+	</h:form>
+
+
+</h:body>
+
+</html>

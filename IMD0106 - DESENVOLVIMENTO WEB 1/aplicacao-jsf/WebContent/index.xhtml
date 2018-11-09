@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<head>
+   <title>JSF Login!</title>
+</head>
+<body>
+   
+   <div style="text-align: center; width: 100%">
+   		#{loginMBean.message}
+   </div>
+   
+   
+   <h:form id="formLogin" >
+   
+   		<h:messages showDetail="true" infoStyle="color:green;" errorStyle="color:red;" warnStyle="color:yellow;"  fatalStyle="color:darkred;"/>
+   		  
+		<table class="tabelaLogin" style="width: 100%; margin-bottom: 10px;">
+			<tbody>
+				<tr>
+					<th><h:outputText value="Login" />:</th>
+					<td style="text-align: left;">
+						<h:inputText id="login" value="#{loginMBean.login}" size="20" maxlength="30" />
+					</td>
+				</tr>
+				<tr>
+					<th><h:outputText value="Password" />:</th>
+					<td style="text-align: left;">
+						<h:inputSecret id="senhaParticipante" value="#{loginMBean.password}" size="20" maxlength="50" />
+					</td>
+				</tr>
+			</tbody>
+
+			<tfoot>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<h:commandButton id="butonLogar" action="#{loginMBean.logar}" value="Logar" />
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+
+	</h:form>
+   
+</body>
+</html>

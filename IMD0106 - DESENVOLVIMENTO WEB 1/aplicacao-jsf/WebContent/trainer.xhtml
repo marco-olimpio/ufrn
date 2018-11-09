@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+
+
+<title>Train your Brain</title>
+</head>
+<body>
+	<h1>Train your Brain</h1>
+
+	<h3>Please calculate the result</h3>
+	<c:view>
+		<c:loadBundle basename="br.ufrn.imd.jsf.messages" var="msg" />
+		<h:form>
+			<h:panelGrid columns="3">
+				<h:panelGrid columns="2">
+					<h:outputLabel value="#{msg.left}"></h:outputLabel>
+					<h:outputLabel id="left" value="#{cardController.card.left}"></h:outputLabel>
+
+					<h:outputLabel value="#{msg.right}"></h:outputLabel>
+					<h:outputLabel id="right" value="#{cardController.card.right}">
+					</h:outputLabel>
+
+					<h:outputLabel value="#{msg.result}"></h:outputLabel>
+					<h:inputText id="result" value="#{cardController.result}"></h:inputText>
+				</h:panelGrid>
+
+			</h:panelGrid>
+			<h:commandButton action="#{cardController.checkResult}"
+				value="#{msg.show}"></h:commandButton>
+			<h:commandButton action="#{cardController.next}" value="#{msg.next}"
+				type="submit"></h:commandButton>
+			<h:messages layout="table"></h:messages>
+
+			<h:panelGroup binding="#{cardController.resultPanel}"
+				rendered="false">
+				<h:message for="result"></h:message>
+			</h:panelGroup>
+
+		</h:form>
+	</c:view>
+</body>
+</html>

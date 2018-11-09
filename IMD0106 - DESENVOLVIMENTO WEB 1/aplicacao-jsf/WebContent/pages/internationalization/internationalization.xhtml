@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<f:view locale="#{localeMBean.locale}"> <!-- Keep the locale by all application -->
+
+		<h:head>
+		   <title>JSF Internationalization</title>
+		</h:head>
+		<!-- 
+		<f:loadBundle basename="br.ufrn.view.internationalization.messages" var="msgs" />
+		 -->
+		<h:body>  
+		   
+		   <h1> <h:outputText value="#{msgs.text}" /> 
+		   		   
+		   </h1>
+		   
+		   <h:form id="formLocale">
+		   		
+				<h:commandLink id="linkChangeLocalePortugues" actionListener="#{localeMBean.changeLocalePortugues}" >
+					<h:graphicImage value="/resources/img/br.png" width="16px" style="padding-left: 2px; padding-right:2px;" />
+				</h:commandLink>
+				<h:commandLink id="linkChangeLocaleEnglish" actionListener="#{localeMBean.changeLocaleEnglish}" >
+					<h:graphicImage value="/resources/img/us.png" width="16px" style="padding-left: 2px; padding-right:2px;"/>
+				</h:commandLink>
+				<h:commandLink id="linkChangeLocaleEspanol" actionListener="#{localeMBean.changeLocaleEspanol}" >
+					<h:graphicImage value="/resources/img/es.png" width="16px" style="padding-left: 2px; padding-right:2px;"/>
+				</h:commandLink>
+				
+			</h:form>
+		   
+		   <br/>
+		   
+		</h:body>
+	
+	</f:view>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- A template for all internal pages -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<h:head>
+	
+			<f:facet name="first">
+			   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		       	<meta http-equiv="Cache-Control" content="no-cache" />
+		       	<meta http-equiv="Pragma" content="no-cache" />
+		       	<meta http-equiv="Expires" content="-1" />
+		   	</f:facet>
+	</h:head>	   	
+	
+	<h:body styleClass="background">
+	
+		<div id="cabecalho">
+	        	
+	       <ui:insert name="cabecalho">
+	       		<ui:include src="/pages/facelets/defaultCabecalho.xhtml" />
+	       </ui:insert>
+	        	
+	    </div>
+	
+		<div id="conteudo" style="text-align: center;">
+		
+			<!--  Define the Default content that can be replaced -->
+			<ui:insert name="conteudo">
+				Conteúdo Default Aqui !
+			</ui:insert>
+			
+		</div>
+		
+		<div id="rodape">
+       		 <ui:insert name="rodape">
+	       		<ui:include src="/pages/facelets/defaultRodape.xhtml" />
+	        </ui:insert>
+		</div>
+		
+	</h:body>
+	
+</html>
+	

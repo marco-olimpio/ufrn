@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+     
+<h:head>
+   <title>JSF Example</title>
+</h:head>
+
+<h:body>
+
+<h2>Converters Hello World </h2>
+
+	<h:form>
+	
+		   <br/><br/>
+    	   <h2>Number Converter</h2>
+    	   Original =>
+    	   <h:outputText value="#{converterMBean.amount}" />
+    	   <br/><br/>
+    	   minFractionDigits 2 =>
+    	   <h:outputText value="#{converterMBean.amount}" >
+				<f:convertNumber minFractionDigits="2" />
+		    </h:outputText>
+    	   <br/><br/>
+    	   pattern #0.000 =>
+    	   <h:outputText value="#{converterMBean.amount}" >
+				<f:convertNumber pattern="#0.000" />
+			</h:outputText>
+    	   
+    	   
+    	   
+    	   
+    	   <br/><br/> 
+    	   <h2>Date Converter</h2>
+    	   
+    	   <h:inputText id="date" value="#{converterMBean.date}"  size="20" required="true" label="Date" >
+    	   		<f:convertDateTime pattern="dd-MM-yyyy" />
+		 	</h:inputText>
+    	   
+    	   <h:message for="date" style="color:red" />
+    	   
+
+    	   <h:outputText value="#{converterMBean.date}" >
+			     <f:convertDateTime pattern="dd-MM-yyyy" />
+		   </h:outputText>
+		   
+		   
+		   
+		   
+		   <br/><br/>
+		   <h2>Custom Converter</h2>
+		   
+		   <h:panelGrid columns="3">
+			
+			Enter person name :
+					
+			<h:inputText id="personName" value="#{converterMBean.name}"  size="50" required="true" label="Person Name">
+				<f:converter converterId="br.ufrn.view.converters.infra.PersonConverter" />
+			</h:inputText>
+					
+			<h:message for="personName" style="color:red" />
+			
+			 <h:outputText value="#{converterMBean.name}" >
+			     <f:converter converterId="br.ufrn.view.converters.infra.PersonConverter" />
+		    </h:outputText>
+				
+		  </h:panelGrid>
+	  
+	  
+	     <br/><br/>
+	 	 <h:commandButton value="Submit" />
+    	 
+	</h:form>
+</h:body>
+
+</html>

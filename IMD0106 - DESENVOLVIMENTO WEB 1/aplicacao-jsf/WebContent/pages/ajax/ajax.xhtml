@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+     
+<h:head>
+   <title>JSF Example</title>
+</h:head>
+
+<h:body>
+
+<h2>Ajax Hello World Example</h2>
+
+	<h:form>
+    	   
+    	   <div>
+    	   		<h:graphicImage value="/resources/img/jsf.png" width="600px"/>
+    	   </div>
+    	   
+    	   
+    	   <h:inputText id="name" value="#{ajaxMBean.name}"></h:inputText>
+    	   
+    	   <h:commandButton id="button1" value="Say Hello with Ajax">
+    		 <f:ajax execute="name" render="output" />
+    	   </h:commandButton>
+    	   
+    	   <h:commandButton id="button2" value="Say Hello without Ajax" />
+    	   
+    	   <h:outputText id="output" value="#{ajaxMBean.sayHello}" />
+    	   
+    	 
+	</h:form>
+</h:body>
+
+</html>
