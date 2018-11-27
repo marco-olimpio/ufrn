@@ -2,7 +2,7 @@
  * @author Marco Olimpio - marco at gmail.com
  */
 
-var moment = require('moment');
+//var moment = require('moment');
 
 var _moduleName = "";
 var _sessionUser = "anonymous";

@@ -7,13 +7,14 @@
 //app modules
 var log = require('./modules/log/logger');
 var sec = require('./modules/security/login');
-var tsk = require('./modules/task/tasks');
+var tsk = require('./modules/tasks/tasks');
 
 //node modules
 var http = require('http');
 var url = require('url');
 var util = require('util');
 var fs = require('fs');
+var moment = require('moment');
 const path = require('path');
 const express = require('express');
 const app = new express();
@@ -55,15 +56,15 @@ app.get('/logout', function(request, response){
 			console.log("disconectioni " + request.query.user);
 			connected = true;
 	}
-}
+});
 
 ///====================================================================
 
 app.get('/task/delete/', function(request, response){
 	if(tsk.delete(request.query.id))
 		response.status(200);
-	else		
-		response.status(
+//	else		
+//		response.status(
 
 });
 

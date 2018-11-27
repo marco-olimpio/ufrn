@@ -6,24 +6,20 @@ import java.util.Date;
 
 public class Student {
 	private String name;
-	private java.util.Date bday;
+	private String bday;
+	private int id;
 
-	public Student() {
-		name = "";
-		bday = new Date();
-	}
-
-	public Student(String name, java.util.Date bday) {
-		this.name = name;
-		this.bday = bday;
+//	public Student() {
+////		name = "";
+////		bday = new Date();
+////		id = 0;
+//	}
+//	
+	public String getBday() {
+		return bday;
 	}
 	
-	public String getBDay() {
-		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		return dateFormat.format(bday);
-	}
-	
-	public void setBDay(java.util.Date bday) {
+	public void setBday(String bday) {
 		this.bday = bday;
 	}
 
@@ -33,6 +29,14 @@ public class Student {
 
 	public String getName() {
 		return name;
+	}
+	
+	public int getId() {
+		return this.id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

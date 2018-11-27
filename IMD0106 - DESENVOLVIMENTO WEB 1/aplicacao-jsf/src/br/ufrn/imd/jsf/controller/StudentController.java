@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import javax.faces.application.FacesMessage;
@@ -26,112 +27,58 @@ public class StudentController {
 	final String lexicon = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345674890";
 	final Set<String> identifiers = new HashSet<String>();
 	final java.util.Random rand = new java.util.Random();
-	private ArrayList<Student> students;
-	private Student student;
+	private ArrayList<Student> students = new ArrayList<Student>();
+	private Student student = new Student();
 	private UIPanel resultPanel;
 	private int result;
 
 	public StudentController() {
-		new Student();
+//		this.addStudent("Marco"  , "1984-05-13");
+//		this.addStudent("Rebecca", "1984-11-29");
+//		this.addStudent("Mark"   , "2013-05-30");
+//		this.addStudent("Lissa"  , "2017-03-30");
 	}
 	public Student getStudent() {
 		return this.student;
 	}
 	public void setStudent(Student student) {
+		System.out.println(student.getName());
+		System.out.println(student.getBday());
 		this.student = student;
 	}
-	public boolean addStudent() {
-		boolean retorno = false;
+	
+	
+	public String addStudent() {
+		//Map<String,String> params = FacesContext.getExternalContext().getRequestParameterMap();
+		//String action = params.get("action");
 		
 		try {
-			Student auxStudent = new Student(getRandomName(),getRandomDateOfBirth());
+			System.out.println(this.student.getName());
+			System.out.println(this.student.getBday());
+			student.setName("John");
+			student.setBday("2018/01/01");
+			students.add(student);
+			System.out.println(this.students.size());
+			System.out.println(this.students.get(0).getName());
+			System.out.println(this.students.get(0).getBday());
 			
-			if(students.add(auxStudent))
-					retorno = true;
+			
+			this.student = new Student();
+			return "student";
 		} catch (Exception e) {
 			e.printStackTrace();
-			retorno = false;
 		}
-		
-		return retorno;
-	}
-	
-	public boolean addStudent(String name, String bday) {
-		DateFormat formatter = new SimpleDateFormat("d-MM-yyyy");
-		Date date;
-		boolean retorno = false;
-		
-		try {
-			date = (Date) formatter.parse(bday);
-			Student auxStudent = new Student(name,date);
-			
-			if(students.add(auxStudent))
-					retorno = true;
-		} catch (ParseException e) {
-			e.printStackTrace();
-			retorno = false;
-		}
-		
-		return retorno;
-	}
-	
-//	public String checkResult() {
-//		FacesContext context = FacesContext.getCurrentInstance();
-//		resultPanel.setRendered(true);
-//		
-//		if (checkOperation()) {
-//			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Correct", null));
-//		} else {
-//			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Incorrect", null));
-//		}
-//		return "trainer";
-//	}
-
-//	private boolean checkOperation() {
-//		return (card.getLeft() + card.getRight() == result);
-//	}
-
-	public UIPanel getResultPanel() {
-		return resultPanel;
-	}
-
-	public void setResultPanel(UIPanel resultPanel) {
-		this.resultPanel = resultPanel;
-	}
-
-	public int getResult() {
-		return result;
-	}
-
-	public void setResult(int result) {
-		this.result = result;
+		return "student";
 	}
 
 	public ArrayList<Student> getAllStudents(){
 		return this.students;
 	}
 	
-//	public String next() {
-//		FacesContext context = FacesContext.getCurrentInstance();
-//		if (checkOperation()) {
-//			resultPanel.setRendered(false);
-//			card = new Card();
-//			return null;
-//		} else {
-//			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Incorrect", null));
-//		}
-//		return "trainer";
-//
-//	}
-
-//	public Card getCard() {
-//		return card;
-//	}
-//
-//	public void setCard(Card card) {
-//		this.card = card;
-//	}
-	
+	public int getNumberOfStudents() {
+		return this.students.size();
+	}
+		
 	private java.util.Date getRandomDateOfBirth(){
 		GregorianCalendar gc = new GregorianCalendar();
 		
@@ -160,5 +107,15 @@ public class StudentController {
 	        }
 	    }
 	    return builder.toString();
+	}
+	
+	private int getNextId() {
+		try {
+			int size = students.size();
+			return size+1;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return 1;
 	}
 }

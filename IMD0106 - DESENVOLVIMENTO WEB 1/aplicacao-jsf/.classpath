@@ -8,5 +8,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/marco/MyProject-1/WebContent/WEB-INF/lib/jsf-api-2.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/marco/MyProject-1/WebContent/WEB-INF/lib/jsf-impl-2.2.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
